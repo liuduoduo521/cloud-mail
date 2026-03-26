@@ -46,10 +46,10 @@ export async function email(message, env, ctx) {
 
 		const account = await accountService.selectByEmailIncludeDel({ env: env }, message.to);
 
-		if (!account && noRecipient === settingConst.noRecipient.CLOSE) {
-			message.setReject('Recipient not found');
-			return;
-		}
+		// if (!account && noRecipient === settingConst.noRecipient.CLOSE) {
+		//	message.setReject('Recipient not found');
+  // return;
+	//	}
 
 		let userRow = {}
 
